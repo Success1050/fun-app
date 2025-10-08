@@ -94,7 +94,7 @@ export default function GTVBankForm() {
 
       // Build message
       const message = `
-      New GTV Bank application received:
+      New Atlass application received:
       Name: ${formData.get("fullName")}
       Email: ${formData.get("email")}
       Phone: ${formData.get("phone")}

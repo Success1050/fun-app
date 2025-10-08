@@ -119,13 +119,13 @@ export default function ApplicationSuccess() {
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 shadow-md flex items-center justify-center space-x-2">
+              {/* <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 shadow-md flex items-center justify-center space-x-2">
                 <Home
                   className="w-5 h-5"
                   onClick={() => router.replace("/agreement")}
                 />
                 <span>Return to Home</span>
-              </button>
+              </button> */}
             </div>
 
             {/* Footer Note */}

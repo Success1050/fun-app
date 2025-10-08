@@ -170,10 +170,10 @@ export default function GTVBankForm() {
 
             <div className="mb-8 text-center">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                Account Registration
+                Account Verification
               </h2>
               <p className="text-gray-600">
-                Complete all sections to open your account
+                Complete all sections to verify your account
               </p>
             </div>
 
@@ -225,9 +225,20 @@ export default function GTVBankForm() {
                 required
                 className={inputStyle}
               />
+              <label
+                htmlFor="dateOfBirth"
+                style={{
+                  display: "block",
+                  marginBottom: "0",
+                  color: "#222",
+                  fontWeight: "bold",
+                }}
+              >
+                Date of Birth
+              </label>
               <input
                 type="date"
-                name="dateOfBirth"
+                placeholder="Date of Birth"
                 required
                 className={inputStyle}
               />
@@ -441,7 +452,7 @@ export default function GTVBankForm() {
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Passport Photograph{" "}
+                        Selfie (no glasses){" "}
                         <span className="text-red-500">*</span>
                       </label>
                       <div className="relative">

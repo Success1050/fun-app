@@ -321,7 +321,7 @@ export default function GTVBankForm() {
             <Section
               title="4"
               label="Registered Next of Kin"
-              subtitle="Provide details of your beneficiary or next of kin for emergency purposes"
+              subtitle="Provide details of your beneficiary or next of kin"
             >
               <div className="md:col-span-2">
                 <input
